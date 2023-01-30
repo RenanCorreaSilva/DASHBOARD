@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html,body{
+    background: #faf9fc;
+    height: 100%;
+}
+
+.clear{clear: both;}
+
+ /**SIDEBAR **/
+
+.sidebar{
+    width: 300px;
+    background: #2d3035;
+    height: 100%;
+    float: left;
+}
+
+.topo{
+    background: #262820;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.topo h3{
+    color: white;
+}
+
+.menu{
+    padding: 30px;
+}
+
+.menu ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu li{
+    margin-bottom: 20px;
+    color: #717171;
+}
+
+.menu ul li a{
+    font-size: 18px;
+    color: #717171;
+    text-decoration: none;
+}
+
+.menu li i{
+    padding: 8px;
+}
+
+.menu li:hover i{
+    transition: 1s;
+    color: #6d3bbb;
+}
+
+.menu li:hover a{
+    transition: 1s;
+    color: white;
+}
+
+/** FIM SIDEBAR **/
+
+
+/**MAIN-CONTENT**/
+
+.main{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+    
+}
+
+
+/**HEADER**/
+
+header{
+    height: 90px;
+    background: white;
+    padding: 20px 15px;
+    border-bottom: 2px solid #ccc;
+
+}
+
+.pesquisa-campo{
+    float: right;
+}
+
+.icone-pesquisa{
+    background: #d6d6d6;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icone-pesquisa i{
+    position: relative;
+    top: 5px;
+}
+
+.pesquisa-campo form{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pesquisa-campo input[type=text]{
+    width: 200px;
+    height: 30px;
+    border-left: 0;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px ;
+    font-size: 16px;
+    outline: none;
+}
+
+.icone-alerta{
+    cursor: pointer;
+    float: right;
+    margin-right: 28px;
+    background: #fbedef;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.icone-alerta i{
+    line-height: 30px;
+    color: #ed7387;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.icone-alerta p{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: inline-block;
+    background-color: #ED7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.nome-usuario{
+    float: left;
+}
+
+.nome-usuario h2{
+    font-weight: normal;
+    font-size:18px ;
+    color: #a7a7a7;
+}
+
+.entire-menu{
+    display: none;
+}
+
+
+   
+
+/**CONTENT***/
+
+.content1{
+    float: left;
+    width: 70%;
+    padding: 30px;
+    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+
+.panel{
+    width: 100%;
+    float: left;
+    border: 2px solid #EBEBEB;
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.panel h2{
+    color: #7f7f7f;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.panel p{
+    font-size: 17px;
+    color: #b2b2b2;
+    margin-top: 10px;
+}
+
+
+/****atualizações***/
+
+.ultimas-atividades{
+    width: 30%;
+    background: #eaebeb;
+    padding: 20px 40px;
+    float: left;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.atividades-topo h2{
+    color: #7f7f7f;
+    font-size: 23px;
+    font-weight: normal;
+    border-bottom:1px solid #ccc ;
+    padding: 15px;
+}
+
+.circle-atividade{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #E9ebeb;
+}
+
+.atividade-registro{
+    position: relative;
+    padding: 15px 10px;
+    border-left: 1px solid #BBBBBB;
+}
+
+.atividade-registro h2{
+    color: #bbbbbb;
+    font-size: 19px;
+    font-family: normal;
+}
+
+.atividade-registro p{
+    color: #b2b2b2;
+    font-size: 15px;
+}
+
+
+
+
+@media screen and (max-width:768px){
+    
+    .ultimas-atividades{
+        display: none;
+    }
+
+    .content1{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .panel{
+        width: 100% !important;
+    }
+
+    .sidebar{
+        display: none;  
+        position: relative;
+        z-index: 9999;
+    }
+
+    .main{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .nome-usuario h2{
+        display: none;
+    }
+
+    .entire-menu {
+        position: absolute;
+        padding: 20px;
+        top: 5px;
+        display: block;
+    }
+    
+    .hamburguer {
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: relative;
+        background: none;
+        margin: 0 0 10px 0;
+    }
+    
+    .hamburguer:after, .hamburguer:before, .hamburguer span, .hamburguer label {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #ccc;
+        left: 0;
+        position: absolute;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+    }
+    
+    .hamburguer:before {
+        top: 0;
+    }
+    
+    .hamburguer:after {
+        bottom: 0;
+    }
+    
+    .hamburguer:focus {
+        outline: none;
+    }
+    
+    .hamburguer label {
+        width: 100%;
+        height: 100%;
+        background: none;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
+    .hamburguer span {
+        top: 8px;
+    }
+    
+    
+    #change-hamburguer {
+        display: none;
+    }
+    
+    #change-hamburguer:checked ~ .hamburguer:before, #change-hamburguer:checked ~ .hamburguer:after {
+        top: 10px;
+        margin-top: -10%;
+    }
+    
+    #change-hamburguer:checked ~ .hamburguer:before {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    
+    #change-hamburguer:checked ~ .hamburguer:after {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    #change-hamburguer:checked ~ .hamburguer span {
+        opacity: 0;
+    }
+    
+}
+
+
+
+
+
+

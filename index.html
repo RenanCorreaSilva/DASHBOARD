@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" >
+    <link href="css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Open+Sans:wght@300;400;700&family=Oswald&family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="topo">
+            <h3>RehTech</h3>
+        </div><!--topo-->
+
+        <div class="menu">
+            <ul>
+                <li><i class="fa-solid fa-angles-right"></i><a href="">Home</a></li>
+                <li><i class="fa-solid fa-angles-right"></i><a href="">Home</a></li>
+                <li><i class="fa-solid fa-angles-right"></i><a href="">Home</a></li>
+                <li><i class="fa-solid fa-angles-right"></i><a href="">Home</a></li>
+                <li><i class="fa-solid fa-angles-right"></i><a href="">Home</a></li>
+            </ul>
+        </div><!--menu-->
+
+    </div><!--sidebar-->
+
+    <div class="main">
+        <header>
+
+            <div class="nome-usuario">
+                <h2>contato@rehtech.com.br</h2>
+
+                <div class="entire-menu">
+
+                    <input type="checkbox" id="change-hamburguer" />
+                  
+                    <a class="hamburguer" href="#">
+                      <span></span>
+                      <label for="change-hamburguer"></label>
+                    </a>
+                  
+                  
+                  </div>
+                  
+            </div><!--nome-usuario-->
+
+            <div class="pesquisa-campo">
+                <div class="icone-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <form><input type="text"></form>
+            </div><!--pesquisa-campo-->
+
+            <div class="icone-alerta">
+                <p>2</p>
+                <i class="fa-solid fa-bell"></i>
+            </div><!--icone-alerta-->
+
+            <div class="clear"></div>
+        </header>
+
+        <div class="content1">
+
+            <div class="panel">
+                <h2>Bem-Vindo, Renan!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.</p>
+            </div><!--panel-->
+
+            <div style="width:49%; margin-right: 1%;" class="panel">
+                <h2>Bem-Vindo, Renan!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.</p>
+            </div><!--panel-->
+
+            <div style="width:49%; margin-left: 1%;" class="panel">
+                <h2>Bem-Vindo, Renan!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.</p>
+            </div><!--panel-->
+
+            <div class="panel">
+                <h2>Bem-Vindo, Renan!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus nam odio optio at, quam iste nesciunt delectus. Similique at laudantium voluptas illum? Quis obcaecati mollitia culpa atque sit natus.</p>
+            </div><!--panel-->
+            
+        </div><!--content1-->
+
+        <div class="ultimas-atividades">
+            <div class="atividades-topo">
+            <h2>Últimas atividades</h2>
+            </div><!--atividades-topo-->
+<br>
+            <div class="atividade-registro">
+                <div class="circle-atividade"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova<b> páginas</b> foi inserida</p>
+            </div>
+
+            <div class="atividade-registro">
+                <div class="circle-atividade"></div>
+
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova<b> páginas</b> foi inserida</p>
+            </div>
+
+            <div class="atividade-registro">
+                <div class="circle-atividade"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova<b> páginas</b> foi inserida</p>
+            </div>
+            
+        </div><!--ultimas-atividades-->
+
+    </div><!--main-->
+
+
+    <div class="clear"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+
+    $(function(){
+        var windowWidth = $(window)[0].innerWidth;
+        if(windowWidth <= 768)
+        $('.hamburguer').click(function(){
+            var el = $('.sidebar');
+            if(el.is(':visible'))
+            {
+                el.hide();
+                $('.main').css('left','0px');
+            }else{
+                el.show();
+                $('.main').css('left','300px');
+            }
+        })
+
+        $(window).resize(function(){
+            var windowWidth = $(window)[0].innerWidth;
+        })
+    })
+    
+
+</script>
+
+</body>
+</html>
